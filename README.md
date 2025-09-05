@@ -17,27 +17,6 @@ This project is a **Flask-based web application** that allows users to encrypt a
 
 ---
 
-## 🖼️ Screenshots
-
-### 🔑 Home Page
-![Home Page](https://via.placeholder.com/800x400.png?text=Home+Page)
-
-### 🔒 AES Encryption Example
-![AES Encryption](https://via.placeholder.com/800x400.png?text=AES+Encryption)
-
-### 🔓 AES Decryption Example
-![AES Decryption](https://via.placeholder.com/800x400.png?text=AES+Decryption)
-
-### 🔒 RSA Encryption Example
-![RSA Encryption](https://via.placeholder.com/800x400.png?text=RSA+Encryption)
-
-### 🔓 RSA Decryption Example
-![RSA Decryption](https://via.placeholder.com/800x400.png?text=RSA+Decryption)
-
-*(Replace the above placeholder links with actual screenshot URLs, e.g., hosted in your GitHub repo or Imgur.)*
-
----
-
 ## 📂 Project Structure
 Crypto_WebApp/
 │── app.py # Flask backend
@@ -48,10 +27,6 @@ Crypto_WebApp/
 │── rsa_public.pem # Stored RSA public key
 │── README.md # Project documentation
 
-yaml
-Copy code
-
----
 
 ## ⚙️ Installation
 
