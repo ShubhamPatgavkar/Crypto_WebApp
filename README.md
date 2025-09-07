@@ -52,10 +52,10 @@ UI Enhancements: SweetAlert
 📸 Screenshots
 
 🔒 Encrypt Mode
-<img src="https://via.placeholder.com/800x400?text=Encrypt+Mode+UI" alt="Encrypt UI"/>
+<img src="static/encrypt.png" alt="Encrypt UI" width="800"/>
 
 🔓 Decrypt Mode
-<img src="https://via.placeholder.com/800x400?text=Decrypt+Mode+UI" alt="Decrypt UI"/>
+<img src="static/decrypt.png" alt="Decrypt UI" width="800"/>
 
 ⚙️ Installation & Setup
 
@@ -86,7 +86,9 @@ crypto_web/
 │── app.py               # Flask backend with AES encryption/decryption logic
 │── templates/
 │    └── index.html      # Frontend UI (Material UI + SweetAlert)
-│── static/              # (Optional) CSS/JS files
+│── static/
+│    ├── encrypt.png     # Screenshot of Encrypt Mode
+│    ├── decrypt.png     # Screenshot of Decrypt Mode
 │── requirements.txt     # Python dependencies
 │── README.md            # Project documentation
 
@@ -103,7 +105,3 @@ crypto_web/
 🙌 Author
 
 👨‍💻 Shubham Patgavkar
-
-🔗 GitHub
-
-💼 Aspiring Web Developer | Data Science Enthusiast
