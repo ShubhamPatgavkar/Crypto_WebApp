@@ -1,80 +1,107 @@
-# 🔐 Crypto WebApp – AES & RSA Encryption/Decryption
+🔐 Crypto Web – File Encryption & Decryption App
 
-This project is a **Flask-based web application** that allows users to encrypt and decrypt text using two popular cryptographic techniques:
+A simple yet powerful Flask-based web application that lets you encrypt and decrypt files securely using AES-256 encryption. Built with a clean UI using Material UI and SweetAlert for interactive feedback.
 
-- **AES (Advanced Encryption Standard)** – Symmetric key encryption for fast and secure bulk data protection.  
-- **RSA (Rivest–Shamir–Adleman)** – Asymmetric key encryption using public/private key pairs for secure communication.
+🚀 Features
 
----
+✅ AES-256 Encryption (PBKDF2 + EAX Mode) – Industry standard security
 
-## 🚀 Features
-- Encrypt and decrypt **custom text** using AES or RSA.
-- Auto-generation and **persistent storage of keys**:
-  - AES key is stored in `aes_key.bin`.
-  - RSA private/public keys are stored in `rsa_private.pem` and `rsa_public.pem`.
-- Interactive **web-based UI** built with Flask.
-- Secure handling of cryptographic operations with PyCryptodome.
+✅ File Upload & Download – Supports any file type
 
----
+✅ Password Protected – Your files are encrypted with your secret key
 
-## 📂 Project Structure
-Crypto_WebApp/
-│── app.py # Flask backend
-│── templates/
-│ └── index.html # Web UI template
-│── aes_key.bin # Stored AES key
-│── rsa_private.pem # Stored RSA private key
-│── rsa_public.pem # Stored RSA public key
-│── README.md # Project documentation
+✅ Toggle Functionality – Switch between Encrypt 🔒 and Decrypt 🔓 modes
+
+✅ Beautiful UI – Modern design with square card layout
+
+✅ SweetAlert Integration – Instant feedback for success/error
+
+✅ Lightweight & Fast – Runs locally with Flask
+
+🏗️ Project Workflow
+
+User Uploads File – Choose any file to encrypt or decrypt
+
+Enter Password – Set password (for encryption) / Enter password (for decryption)
+
+Encryption Flow
+
+File + filename packed → Encrypted with AES-256 (PBKDF2 key derivation)
+
+Output file: yourfile.enc
+
+Decryption Flow
+
+Encrypted file + password → Original file retrieved
+
+Handles wrong password with SweetAlert error
+
+Download Result – User downloads secure/encrypted/decrypted file
+
+🖥️ Tech Stack
+
+Backend: Flask
+
+Encryption: PyCryptodome
+ (AES, PBKDF2)
+
+Frontend: HTML, CSS, Material UI
+
+UI Enhancements: SweetAlert
+
+📸 Screenshots
+
+🔒 Encrypt Mode
+<img src="static/encrypt.png" alt="Encrypt UI" width="800"/>
+
+🔓 Decrypt Mode
+<img src="static/decrypt.png" alt="Decrypt UI" width="800"/>
+
+⚙️ Installation & Setup
+
+Clone the repository:
+
+git clone https://github.com/your-username/crypto_web.git
+cd crypto_web
 
 
-## ⚙️ Installation
+Create a virtual environment & install dependencies:
 
-1. Clone this repository:
-   ```bash
-   git clone https://github.com/your-username/Crypto_WebApp.git
-   cd Crypto_WebApp
-Create a virtual environment (recommended):
-
-bash
-Copy code
 python -m venv venv
-source venv/bin/activate   # For Linux/Mac
-venv\Scripts\activate      # For Windows
-Install dependencies:
+source venv/bin/activate   # On Windows use venv\Scripts\activate
+pip install -r requirements.txt
 
-bash
-Copy code
-pip install flask pycryptodome
-▶️ Running the App
-Start the Flask server:
 
-bash
-Copy code
+Run the Flask app:
+
 python app.py
-Open your browser and go to:
 
-cpp
-Copy code
-http://127.0.0.1:5000
-🔐 How It Works
-AES
-A secret AES key is generated once and stored in aes_key.bin.
 
-User text is padded, encrypted, and Base64-encoded.
+Open in your browser:
 
-On decryption, the ciphertext is decoded and restored using the stored AES key.
+http://127.0.0.1:5050
 
-RSA
-RSA private and public keys are generated once and stored in .pem files.
+📂 Project Structure
+crypto_web/
+│── app.py               # Flask backend with AES encryption/decryption logic
+│── templates/
+│    └── index.html      # Frontend UI (Material UI + SweetAlert)
+│── static/
+│    ├── encrypt.png     # Screenshot of Encrypt Mode
+│    ├── decrypt.png     # Screenshot of Decrypt Mode
+│── requirements.txt     # Python dependencies
+│── README.md            # Project documentation
 
-User text is encrypted using the public key.
+🔮 Future Enhancements
 
-Decryption uses the private key.
+📦 Multi-file & folder encryption (ZIP support)
 
-🛡️ Security Notes
-Never share your private key (rsa_private.pem) or AES key file.
+☁️ Cloud integration (AWS S3 / Google Drive)
 
-For production, consider storing keys securely (e.g., using a key vault).
+👥 User authentication & session management
 
-This demo is for educational purposes.
+📊 File activity logs & analytics
+
+🙌 Author
+
+👨‍💻 Shubham Patgavkar
